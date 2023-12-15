@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+<div class="c_elements"style="display:flex;">
+<div id="calculator-box">
+    <input type="text"  class="display" aria-label="displayText" readonly>
+    <div class="button-container">
+        <table>
+        <tr>
+            <td><button class="c-btn" onclick="
+                expression=''
+                display.value=''">C</button></td>
+            <td><button class="c-btn" onclick="
+                expression+='1';
+                display.value=expression">1</button></td>
+            <td><button class="c-btn"onclick="
+                expression+='2'
+                display.value=expression">2</button></td>
+        </tr>
+        <tr>
+            <td><button class="c-btn" onclick="
+                expression+='+';
+                display.value=expression" >+</button></td>
+            <td><button class="c-btn" onclick="
+                expression+='3';
+                display.value=expression">3</button></td>
+            <td><button class="c-btn"onclick="
+                expression+='4';
+                display.value=expression">4</button></td>
+        </tr>
+        <tr>
+            <td><button class="c-btn"onclick="
+                expression+='-';
+                display.value=expression">-</button></td>
+            <td><button class="c-btn"onclick="
+                expression+='5';
+                display.value=expression">5</button></td>
+            <td><button class="c-btn"onclick="
+                expression+='6';
+                display.value=expression">6</button></td>
+        </tr>
+        <tr>
+            <td><button class="c-btn"onclick="
+                expression+='*';
+                display.value=expression">*</button></td>
+            <td><button class="c-btn"onclick="
+                expression+='7';
+                display.value=expression">7</button></td>
+            <td><button class="c-btn"onclick="
+                expression+='8';
+                display.value=expression">8</button></td>
+        </tr>
+        <tr>
+            <td><button class="c-btn"onclick="
+                expression+='/';
+                display.value=expression">/</button></td>
+            <td><button class="c-btn"onclick="
+                expression+='9';
+                display.value=expression">9</button></td>
+            <td><button class="c-btn"onclick="
+                expression+='0';
+                display.value=expression">0</button></td>
+        </tr>
+        <tr>
+            <td ><button class="c-btn"onclick="
+                expression+='^';
+                display.value=expression" >^</button></td>
+            <td ><button class="c-btn"onclick="
+                expression+='.';
+                display.value=expression">.</button></td>
+            <td ><button class="c-btn"onclick="
+                final_expression.push(expression)
+                display.value=eval(expression)">=</button></td>
+           
+        </tr>
+        
+        </table>
+ 
+        
+    </div>
+    
+</div>
+<div style=" margin-left:100px;" >
+    <div style="display:flex">
+    <h4>History</h4>
+    <button   onclick="
+    document.querySelector('.refresh-history-btn').value=final_expression">Refresh</button>
+</div>
+    <textarea  class="refresh-history-btn" readonly id="" cols="20" rows="10"></textarea>
+
+</div>
+</div>
+
+
+
+<h2></h2>
+
+<script src="calculator.js" charset="utf-8" ></script>
+</body>
+</html>
